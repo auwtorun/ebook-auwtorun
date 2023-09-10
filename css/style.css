@@ -1,0 +1,51 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+:root {
+    --text-darkmode: #dfdfdf;
+    --secondcolor-darkmode: #666666;
+    --background-darkmode: #000;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    background-color: var(--background-darkmode);
+    color: var(--text-darkmode);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.greet-section {
+    margin: 24px;
+}
+
+.books-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    width: min(360px, 80%);
+    height: 480px;
+    padding: 12px;
+    border: 1px solid red;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.book-card img {
+    height: 80%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 6px;
+}
+
+.book-card #date-created {
+    color: var(--secondcolor-darkmode);
+}
