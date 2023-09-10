@@ -9,24 +9,26 @@ var dataBookJSON = {
         "date": new Date("2023-09-10T11:23:00"),
         "pages": "",
         "image": "./img/a-things-about-you.jpg",
-        "link": "pages/a-things-about-you.html"
+        "link": "./pages/a-things-about-you.html"
     }
 };
 
-const judulBuku = document.getElementById('book-title');
-const judulBukuJSON = dataBookJSON.book.title;
+var judulBuku = document.getElementById('book-title');
+var judulBukuJSON = dataBookJSON.book.title;
 judulBuku.textContent = judulBukuJSON;
 
-const gambarBuku = document.getElementById('book-image');
-const gambarBukuJSON = dataBookJSON.book.image;
+var gambarBuku = document.getElementById('book-image');
+var gambarBukuJSON = dataBookJSON.book.image;
 gambarBuku.src = gambarBukuJSON;
+
+var linkBukuJSON = dataBookJSON.book.link;
 
 
 //Data JSON Function Section End
 
 //Click Card Function Section Start
 const clickCard = () => {
-    const link = 'pages/home.html';
+    const link = linkBukuJSON;
     const bookCard = document.getElementById('book-card');
     bookCard.addEventListener('click', function() {
         window.location.href=link
